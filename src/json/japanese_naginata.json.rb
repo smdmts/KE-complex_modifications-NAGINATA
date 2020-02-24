@@ -485,10 +485,10 @@ ROMAN_MAP = {
 def main
   now = Time.now.to_i
   puts JSON.pretty_generate(
-    'title' => 'Japanese NAGINATA STYLE (v11)',
+    'title' => 'Japanese NAGINATA STYLE (v12)',
     'rules' => [
       {
-        'description' => "Japanese NAGINATA STYLE (v11) #{MODE}#{TYKEYMODE}Build #{now} ",
+        'description' => "Japanese NAGINATA STYLE (v12) #{MODE}#{TYKEYMODE}Build #{now} ",
         'manipulators' => [
           # 同時打鍵数の多いものから書く
           shiftkeydef(),#連続シフト用定義
@@ -571,34 +571,34 @@ def main
           three_keys(SPACEBAR,'v',SEMICOLON,'ゎ'),
           # シフト「りゅ」のみ「てゅ」に定義
           three_keys(SPACEBAR, 'e','p','てゅ'),
-          three_keys('s','j','h','ぎゃ'),
+          three_keys('w','j','h','ぎゃ'),
           three_keys('r','j','h','じゃ'),
           three_keys('g','j','h','ぢゃ'),
-          three_keys('x','j','h','びゃ'),
-          three_keys('s','j','p','ぎゅ'),
+          three_keys('s','j','h','びゃ'),
+          three_keys('w','j','p','ぎゅ'),
           three_keys('r','j','p','じゅ'),
           three_keys('g','j','p','ぢゅ'),
-          three_keys('x','j','p','びゅ'),
-          three_keys('s','j','i','ぎょ'),
+          three_keys('s','j','p','びゅ'),
+          three_keys('w','j','i','ぎょ'),
           three_keys('r','j','i','じょ'),
           three_keys('g','j','i','ぢょ'),
-          three_keys('x','j','i','びょ'),
+          three_keys('s','j','i','びょ'),
           # じゅぎゅが打ちにくいので、例外的に半濁音キーでもオーケーとする
           three_keys('r','m','i','じょ'),
           three_keys('r','m','h','じゃ'),
           three_keys('r','m','p','じゅ'),
-          three_keys('s','m','i','ぎょ'),
-          three_keys('s','m','h','ぎゃ'),
-          three_keys('s','m','p','ぎゅ'),
+          three_keys('w','m','i','ぎょ'),
+          three_keys('w','m','h','ぎゃ'),
+          three_keys('w','m','p','ぎゅ'),
           three_keys('g','m','i','ぢょ'),
           three_keys('g','m','h','ぢゃ'),
           three_keys('g','m','p','ぢゅ'),
-          three_keys('x','j','i','びょ'),
-          three_keys('x','j','p','びゅ'),
+          three_keys('s','j','i','びょ'),
+          three_keys('s','j','p','びゅ'),
           # 半濁音ゃゅょは「ぴ」のみ
-          three_keys('x','m','i','ぴょ'),
-          three_keys('x','m','h','ぴゃ'),
-          three_keys('x','m','p','ぴゅ'),
+          three_keys('s','m','i','ぴょ'),
+          three_keys('s','m','h','ぴゃ'),
+          three_keys('s','m','p','ぴゅ'),
           three_keys('e','j','p','でゅ'),
           three_keys('r','j','o','じぇ'),
           three_keys('g','j','o','ぢぇ'),
@@ -612,6 +612,12 @@ def main
           #Mac版のみの拡張
           three_keys('r','j','t','じぇ'),
           three_keys('g','j','t','ぢぇ'),
+          #外来音
+          three_keys('f','l','j','ヴぁ'),
+          three_keys('f','l','k','ヴぃ'),
+          three_keys('f','l','o','ヴぇ'),
+          three_keys('f','l','n','ヴぉ'),
+          three_keys('f','l','p','ヴゅ'),
           # ------------------------------
           # 2同時打鍵
           # 右手濁点
@@ -619,21 +625,21 @@ def main
           two_keys('o','f','ず'),
           two_keys('p','f','べ'),
           two_keys('h','f','ぐ'),
-          two_keys('l','f','づ'),
+          two_keys('l','f','ヴ'),
           two_keys('n','f','だ'),
           two_keys(PERIOD,'f','ぶ'),
           # 左手濁点
-          two_keys('s','j','ぎ'),
+          two_keys('w','j','ぎ'),
           two_keys('e','j','で'),
           two_keys('r','j','じ'),
           two_keys('z','j','ぼ'),
-          two_keys('c','j','げ'),
+          two_keys('x','j','げ'),
           two_keys('d','j','ど'),
           two_keys('f','j','が'),
           two_keys('g','j','ぢ'),
           two_keys('a','j','ぜ'),
-          two_keys('x','j','び'),
-          two_keys('w','j','ば'),
+          two_keys('s','j','び'),
+          two_keys('c','j','ば'),
           two_keys('v','j','ご'),
           two_keys('b','j','ぞ'),
           # 右手半濁音
@@ -641,8 +647,8 @@ def main
           two_keys(PERIOD,'v','ぷ'),
           # 左手半濁音
           two_keys('z','m','ぽ'),
-          two_keys('x','m','ぴ'),
-          two_keys('w','m','ぱ'),
+          two_keys('s','m','ぴ'),
+          two_keys('c','m','ぱ'),
           # 拗音シフト やゆよと同時押しで、ゃゅょが付く
           two_keys('w','h','きゃ'),
           two_keys('e','h','りゃ'),
@@ -650,7 +656,7 @@ def main
           two_keys('b','h','みゃ'),
           two_keys('d','h','にゃ'),
           two_keys('g','h','ちゃ'),
-          two_keys('x','h','ひゃ'),
+          two_keys('s','h','ひゃ'),
           two_keys('w','p','きゅ'),
           two_keys('e','p','りゅ'),
           two_keys('r','p','しゅ'),
@@ -685,11 +691,6 @@ def main
           # 外来音
           two_keys('e','k','てぃ'),
           two_keys('d','l','とぅ'),
-          two_keys('q','o','ヴぇ'),
-          two_keys('q','j','ヴぁ'),
-          two_keys('q','k','ヴぃ'),
-          two_keys('q','n','ヴぉ'),
-          two_keys('q','p','ヴゅ'),
           # 右手領域の同時押し外来音
           two_keys('l','j','うぁ'),
           two_keys('l','k','うぃ'),
@@ -750,7 +751,7 @@ def main
           shift_key('v', '、'),
           shift_key('s', 'ぬ'),
           shift_key('n', 'お'),
-          shift_key('m', '。改'),
+          shift_key('m', '。'),
           shift_key('p', 'ゆ'),
           shift_key(PERIOD, 'ふ'),
           shift_key('t', TKEY),
@@ -782,7 +783,7 @@ def main
           continuous_shift('v', '、'),
           continuous_shift('s', 'ぬ'),
           continuous_shift('n', 'お'),
-          continuous_shift('m', '。改'),
+          continuous_shift('m', '。'),
           continuous_shift('p', 'ゆ'),
           continuous_shift(PERIOD, 'ふ'),
           continuous_shift('t', TKEY),
