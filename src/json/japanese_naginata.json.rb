@@ -636,6 +636,7 @@ def main
           two_keys('x','j','げ'),
           two_keys('d','j','ど'),
           two_keys('f','j','が'),
+          two_keys('f',SEMICOLON,'づ'),
           two_keys('g','j','ぢ'),
           two_keys('a','j','ぜ'),
           two_keys('s','j','び'),
